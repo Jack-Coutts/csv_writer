@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "csv-writer"
+version = "0.1.0"
+description = ""
+authors = ["Jack Coutts <jackwgcoutts@proton.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+pandas = "^2.2.3"
+
+
+pyinstaller = "^6.11.1"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+csv_writer = "csv_writer.main:main"
