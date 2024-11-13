@@ -94,13 +94,15 @@ def edit_csv():
     # Get the name of the new csv file and check it exists
     filepath = None
     while filepath is None:
-        filepath = os.path.join(
-            base_dir,
-            Path(
-                input(
-                    "Please enter the filepath of the file you want to edit: "
-                )
-            ),
+        filepath = Path(
+            os.path.join(
+                base_dir,
+                Path(
+                    input(
+                        "Please enter the filepath of the file you want to edit: "
+                    )
+                ),
+            )
         )
         if filepath.is_file():  # file exists
             print("File found.")
